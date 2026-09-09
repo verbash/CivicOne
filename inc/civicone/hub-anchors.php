@@ -2,11 +2,11 @@
 /**
  * Hub “On this page” anchor strip — fillable block pattern, hoisted into section subnav.
  *
- * Editors insert the civic-1/hub-on-page-anchors pattern on a section hub page.
- * The group uses class cv1-hub-on-page-anchors; links may live in a list or paragraph.
- * Front-end: links are parsed and rendered in .cv1-section-subnav__anchors; the group is hidden.
+ * Editors insert the civicone/hub-on-page-anchors pattern on a section hub page.
+ * The group uses class civicone-hub-on-page-anchors; links may live in a list or paragraph.
+ * Front-end: links are parsed and rendered in .civicone-section-subnav__anchors; the group is hidden.
  *
- * @package Civic1
+ * @package CivicOne
  */
 
 declare(strict_types=1);
@@ -20,14 +20,14 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @param array<string, mixed> $block Block data.
  */
-function civic_1_is_hub_on_page_anchors_block( array $block ): bool {
+function civicone_is_hub_on_page_anchors_block( array $block ): bool {
 	if ( ( $block['blockName'] ?? '' ) !== 'core/group' ) {
 		return false;
 	}
 
 	$class = (string) ( $block['attrs']['className'] ?? '' );
 
-	return str_contains( $class, 'cv1-hub-on-page-anchors' );
+	return str_contains( $class, 'civicone-hub-on-page-anchors' );
 }
 
 /**
@@ -36,7 +36,7 @@ function civic_1_is_hub_on_page_anchors_block( array $block ): bool {
  * @param int|null $post_id Page ID; defaults to queried object.
  * @return list<array{label: string, url: string}>
  */
-function civic_1_get_hub_on_page_anchors( ?int $post_id = null ): array {
+function civicone_get_hub_on_page_anchors( ?int $post_id = null ): array {
 	$post_id = $post_id ?? (int) get_queried_object_id();
 	if ( $post_id <= 0 ) {
 		return array();
@@ -47,12 +47,12 @@ function civic_1_get_hub_on_page_anchors( ?int $post_id = null ): array {
 		return array();
 	}
 
-	$container = civic_1_find_hub_on_page_anchors_block( parse_blocks( $post->post_content ) );
+	$container = civicone_find_hub_on_page_anchors_block( parse_blocks( $post->post_content ) );
 	if ( null === $container ) {
 		return array();
 	}
 
-	$links = civic_1_collect_anchor_links_from_blocks( array( $container ), $post_id );
+	$links = civicone_collect_anchor_links_from_blocks( array( $container ), $post_id );
 	$out   = array();
 
 	foreach ( $links as $link ) {
@@ -76,14 +76,14 @@ function civic_1_get_hub_on_page_anchors( ?int $post_id = null ): array {
  * @param list<array<string, mixed>> $blocks Blocks.
  * @return array<string, mixed>|null
  */
-function civic_1_find_hub_on_page_anchors_block( array $blocks ): ?array {
+function civicone_find_hub_on_page_anchors_block( array $blocks ): ?array {
 	foreach ( $blocks as $block ) {
-		if ( civic_1_is_hub_on_page_anchors_block( $block ) ) {
+		if ( civicone_is_hub_on_page_anchors_block( $block ) ) {
 			return $block;
 		}
 
 		if ( ! empty( $block['innerBlocks'] ) ) {
-			$found = civic_1_find_hub_on_page_anchors_block( $block['innerBlocks'] );
+			$found = civicone_find_hub_on_page_anchors_block( $block['innerBlocks'] );
 			if ( null !== $found ) {
 				return $found;
 			}
@@ -100,18 +100,18 @@ function civic_1_find_hub_on_page_anchors_block( array $blocks ): ?array {
  * @param int                        $post_id Page ID for resolving hash-only hrefs.
  * @return list<array{label: string, url: string}>
  */
-function civic_1_collect_anchor_links_from_blocks( array $blocks, int $post_id ): array {
+function civicone_collect_anchor_links_from_blocks( array $blocks, int $post_id ): array {
 	$links = array();
 
 	foreach ( $blocks as $block ) {
-		if ( civic_1_is_hub_on_page_anchors_block( $block ) ) {
+		if ( civicone_is_hub_on_page_anchors_block( $block ) ) {
 			$inner = $block['innerBlocks'] ?? array();
 			if ( is_array( $inner ) && ! empty( $inner ) ) {
-				$links = array_merge( $links, civic_1_collect_anchor_links_from_blocks( $inner, $post_id ) );
+				$links = array_merge( $links, civicone_collect_anchor_links_from_blocks( $inner, $post_id ) );
 			}
 			$html = (string) ( $block['innerHTML'] ?? '' );
 			if ( '' !== $html ) {
-				$links = array_merge( $links, civic_1_parse_anchor_links_from_html( $html, $post_id ) );
+				$links = array_merge( $links, civicone_parse_anchor_links_from_html( $html, $post_id ) );
 			}
 			continue;
 		}
@@ -119,11 +119,11 @@ function civic_1_collect_anchor_links_from_blocks( array $blocks, int $post_id )
 		$name = (string) ( $block['blockName'] ?? '' );
 		if ( in_array( $name, array( 'core/list', 'core/paragraph' ), true ) ) {
 			$html  = (string) ( $block['innerHTML'] ?? '' );
-			$links = array_merge( $links, civic_1_parse_anchor_links_from_html( $html, $post_id ) );
+			$links = array_merge( $links, civicone_parse_anchor_links_from_html( $html, $post_id ) );
 		}
 
 		if ( ! empty( $block['innerBlocks'] ) ) {
-			$links = array_merge( $links, civic_1_collect_anchor_links_from_blocks( $block['innerBlocks'], $post_id ) );
+			$links = array_merge( $links, civicone_collect_anchor_links_from_blocks( $block['innerBlocks'], $post_id ) );
 		}
 	}
 
@@ -137,7 +137,7 @@ function civic_1_collect_anchor_links_from_blocks( array $blocks, int $post_id )
  * @param int    $post_id Page ID.
  * @return list<array{label: string, url: string}>
  */
-function civic_1_parse_anchor_links_from_html( string $html, int $post_id ): array {
+function civicone_parse_anchor_links_from_html( string $html, int $post_id ): array {
 	$links = array();
 
 	if ( ! preg_match_all( '/<a\s[^>]*href=(["\'])([^"\']+)\1[^>]*>(.*?)<\/a>/is', $html, $matches, PREG_SET_ORDER ) ) {
@@ -152,7 +152,7 @@ function civic_1_parse_anchor_links_from_html( string $html, int $post_id ): arr
 	foreach ( $matches as $match ) {
 		$href  = html_entity_decode( (string) $match[2], ENT_QUOTES | ENT_HTML5, 'UTF-8' );
 		$label = (string) $match[3];
-		$url   = civic_1_resolve_hub_anchor_href( $href, $permalink );
+		$url   = civicone_resolve_hub_anchor_href( $href, $permalink );
 
 		if ( '' !== $url ) {
 			$links[] = array(
@@ -171,7 +171,7 @@ function civic_1_parse_anchor_links_from_html( string $html, int $post_id ): arr
  * @param string $href      Link href from editor.
  * @param string $permalink Hub page permalink.
  */
-function civic_1_resolve_hub_anchor_href( string $href, string $permalink ): string {
+function civicone_resolve_hub_anchor_href( string $href, string $permalink ): string {
 	$href = trim( $href );
 	if ( '' === $href ) {
 		return '';
@@ -194,7 +194,7 @@ function civic_1_resolve_hub_anchor_href( string $href, string $permalink ): str
  * @param string               $content Rendered block HTML.
  * @param array<string, mixed> $block   Block data.
  */
-function civic_1_heading_anchor_id( string $content, array $block ): string {
+function civicone_heading_anchor_id( string $content, array $block ): string {
 	if ( ( $block['blockName'] ?? '' ) !== 'core/heading' ) {
 		return $content;
 	}
@@ -213,7 +213,7 @@ function civic_1_heading_anchor_id( string $content, array $block ): string {
 
 	return is_string( $replaced ) ? $replaced : $content;
 }
-add_filter( 'render_block', 'civic_1_heading_anchor_id', 10, 2 );
+add_filter( 'render_block', 'civicone_heading_anchor_id', 10, 2 );
 
 /**
  * Hide the fillable anchors group on the front end (markup is hoisted to section subnav).
@@ -221,11 +221,11 @@ add_filter( 'render_block', 'civic_1_heading_anchor_id', 10, 2 );
  * @param string               $content Rendered block HTML.
  * @param array<string, mixed> $block   Block data.
  */
-function civic_1_hide_hub_on_page_anchors_block( string $content, array $block ): string {
-	if ( is_admin() || ! civic_1_is_hub_on_page_anchors_block( $block ) ) {
+function civicone_hide_hub_on_page_anchors_block( string $content, array $block ): string {
+	if ( is_admin() || ! civicone_is_hub_on_page_anchors_block( $block ) ) {
 		return $content;
 	}
 
 	return '';
 }
-add_filter( 'render_block', 'civic_1_hide_hub_on_page_anchors_block', 10, 2 );
+add_filter( 'render_block', 'civicone_hide_hub_on_page_anchors_block', 10, 2 );

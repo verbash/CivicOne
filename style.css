@@ -1,0 +1,20 @@
+/*
+Theme Name: CivicOne
+Theme URI: https://github.com/verbash/civicone
+Description: CivicOne — a civic/nonprofit site framework for WordPress (FSE child theme of Twenty Twenty-Two). Section hubs with menu-editable tab rows and headings, header + drawer nav, and content patterns. Consolidated from the former CivicOne plugin + child theme into one installable, git-updatable theme.
+Author: Turing Tools
+Author URI: https://github.com/verbash
+Template: twentytwentytwo
+Version: 0.1.0
+Requires at least: 6.4
+Tested up to: 6.7
+Requires PHP: 8.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: civicone
+Update URI: https://github.com/verbash/civicone
+GitHub Theme URI: verbash/civicone
+Primary Branch: main
+*/
+
+/* Frontend styles load from assets/civicone.css via functions.php */

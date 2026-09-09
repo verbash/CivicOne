@@ -1,50 +1,36 @@
-# Civic-1 — WordPress Plugin
+# CivicOne
 
-Portable Civic-1 (cv1) UI kit for coalition / community-org child themes.
+Self-contained civic child theme of **Twenty Twenty-Two**. CivicOne folds the
+former `civicone` plugin entirely into the theme — there is **no companion
+plugin**. Header, drawer nav, section navigation, block patterns, block styles,
+and `assets/civicone.css` all load from the theme on theme init.
 
-## Naming
+## What the theme provides
 
-| Use | Form | Example |
-|-----|------|---------|
-| Product / inserter / docs | **Civic-1** | Block category label “Civic-1” |
-| UI kit prefix | **cv1** | `.cv1-section-subnav`, `cv1.css` |
-| WordPress slugs | **civic-1** | Plugin folder, patterns `civic-1/callout`, text domain, style handle |
+| Piece | Path |
+| --- | --- |
+| Brand tokens / templates | `theme.json`, `templates/`, `parts/` |
+| **Standard Page** template (`templates/page.html`) | Same header/footer shell as the front page — use for `/community/` and other interior pages |
+| CivicOne UI kit (header, drawer, section nav, CTA, patterns, block styles, base CSS) | `inc/civicone/*.php`, `assets/`, `patterns/` |
+| D4C section tabs + nav ID | `inc/d4c-section-config.php` |
+| Blog helpers | `inc/blog.php` |
+| Section-tab menu seeder | `inc/d4c-section-tabs.php`, `inc/d4c-section-tabs-seed.php` |
+| Header pattern | `patterns/header-bar.php` → `civicone_header_bar_markup()` in `inc/civicone/header-bar.php` |
 
-Brand, slugs, and UI prefix all use **1** (not “one”). PHP functions use `civic_1_*` / `cv1_*`; constants use `CIVIC_1_*`.
+All CivicOne components are required at the top of `functions.php` (before any
+hook fires) so every `civicone_*` function exists before rendering.
 
-## What this plugin provides
+## Header
 
-| Capability | Detail |
-|---|---|
-| **Components** | Header bar, drawer nav, header CTA, section subnav/title, embed wrappers, hub anchors |
-| **Block patterns** | 12 content patterns under `civic-1/*` |
-| **Heading styles** | `cv1-page-title`, `cv1-section`, `cv1-accent` (editor style picker + CSS classes) |
-| **Styles** | `cv1.css`, drawer, mobile, header CTA/critical |
-| **Section registry** | Logic in `inc/section-registry.php`; data via `civic_1_section_configs` filter |
+Canonical markup: **`inc/civicone/header-bar.php`**, exposed as pattern
+**`civicone/header-bar`** (`patterns/header-bar.php`). `parts/header.html`
+references that pattern only.
 
-## What stays in the child theme
+Live DB template part (post **591**) should match the pattern block. Mobile
+drawer and donate CTA attach via theme PHP — do not add them in the Site Editor.
 
-| File | Reason |
-|---|---|
-| `inc/d4c-section-config.php` (per client) | Section tabs/hubs, nav post ID, CTA copy — filters only |
-| `inc/blog.php` (optional, D4C) | Client-specific blog markup |
-| `patterns/header-bar.php` | Pattern slug references theme; calls `cv1_header_bar_markup()` |
-| `parts/header.html`, templates, `theme.json` | FSE shell + brand tokens |
+## Component map
 
-## Client integration filters
-
-```php
-add_filter( 'civic_1_primary_nav_id', fn (): int => 791 );
-add_filter( 'civic_1_section_configs', 'my_client_section_configs' );
-add_filter( 'cv1_header_cta_button_label', fn () => __( 'Donate', 'my-theme' ) );
-```
-
-## Navigation
-
-Menus are `wp_navigation` posts (Site Editor). Default primary nav ID **791** — override with `civic_1_primary_nav_id`.
-
-## Requirements
-
-- WordPress 6.5+
-- PHP 8.1+
-- FSE block child theme (Twenty Twenty-Two or compatible)
+See **`civicone-component-library.md`** (repo root). All CivicOne component
+paths are under `inc/civicone/`, with assets under `assets/` and patterns under
+`patterns/`.

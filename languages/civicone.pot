@@ -1,0 +1,473 @@
+# Copyright (C) 2026 Turing Tools
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CivicOne 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/civicone\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-09-09T02:29:30+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: civicone\n"
+
+#. Theme Name of the theme
+#: style.css
+#: inc/civicone/patterns.php:29
+msgid "CivicOne"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://github.com/verbash/civicone"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "CivicOne — a civic/nonprofit site framework for WordPress (FSE child theme of Twenty Twenty-Two). Section hubs with menu-editable tab rows and headings, header + drawer nav, and content patterns. Consolidated from the former CivicOne plugin + child theme into one installable, git-updatable theme."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Turing Tools"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://github.com/verbash"
+msgstr ""
+
+#. translators: %d: minutes to read
+#: inc/blog.php:69
+#, php-format
+msgid "%d min read"
+msgid_plural "%d min read"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/civicone/blocks.php:62
+msgid "CivicOne section sub-nav — appears on section pages; edit tabs in Appearance → Menus"
+msgstr ""
+
+#: inc/civicone/drawer-nav.php:143
+msgid "Open menu"
+msgstr ""
+
+#: inc/civicone/drawer-nav.php:150
+msgid "Main menu"
+msgstr ""
+
+#: inc/civicone/drawer-nav.php:164
+msgid "Close menu"
+msgstr ""
+
+#: inc/civicone/drawer-nav.php:169
+msgid "Main"
+msgstr ""
+
+#. translators: %s: parent menu label
+#: inc/civicone/drawer-nav.php:238
+#, php-format
+msgid "Show %s submenu"
+msgstr ""
+
+#: inc/civicone/header-cta.php:28
+#: inc/d4c-section-config.php:16
+msgid "Help support our efforts!"
+msgstr ""
+
+#: inc/civicone/header-cta.php:32
+#: inc/d4c-section-config.php:17
+msgid "Donate to D4C"
+msgstr ""
+
+#: inc/civicone/header-cta.php:64
+msgid "Support the coalition"
+msgstr ""
+
+#: inc/civicone/heading-styles.php:30
+msgid "civicone Page title"
+msgstr ""
+
+#: inc/civicone/heading-styles.php:38
+msgid "civicone Section"
+msgstr ""
+
+#: inc/civicone/heading-styles.php:46
+msgid "civicone Accent"
+msgstr ""
+
+#: inc/civicone/patterns.php:30
+msgid "Reusable UI components from the CivicOne (civicone) design kit."
+msgstr ""
+
+#: inc/civicone/patterns.php:36
+msgid "CivicOne layout"
+msgstr ""
+
+#: inc/civicone/patterns.php:42
+msgid "CivicOne section"
+msgstr ""
+
+#: inc/civicone/patterns.php:83
+msgid "civicone H2 heading"
+msgstr ""
+
+#: inc/civicone/patterns.php:84
+msgid "Pre-styled H2 for interior page content (civicone-page-title class, x-large). Start post content here — the page template renders the H1."
+msgstr ""
+
+#: inc/civicone/patterns.php:91
+msgid "civicone H3 heading — inline"
+msgstr ""
+
+#: inc/civicone/patterns.php:92
+msgid "H3 subsection heading for flowing page content (no anchor ID). Use below a civicone H2 when you do not need hub anchor-tab navigation."
+msgstr ""
+
+#: inc/civicone/patterns.php:99
+msgid "CivicOne callout"
+msgstr ""
+
+#: inc/civicone/patterns.php:100
+msgid "Newsletter-style notice box — flat fill, 1 px border, no shadow."
+msgstr ""
+
+#: inc/civicone/patterns.php:106
+msgid "Hub topic card"
+msgstr ""
+
+#: inc/civicone/patterns.php:107
+msgid "Linked H3 card for section hub grids (Resources topics, Programs paths, etc.)."
+msgstr ""
+
+#: inc/civicone/patterns.php:113
+msgid "Hub section intro"
+msgstr ""
+
+#: inc/civicone/patterns.php:114
+msgid "H2 hub intro below page tabs — e.g. Volunteer resources on the Resources landing page."
+msgstr ""
+
+#: inc/civicone/patterns.php:120
+msgid "Hub on-page anchors"
+msgstr ""
+
+#: inc/civicone/patterns.php:121
+msgid "“On this page” jump links for section hubs. Place at the top of hub content; links hoist into the section subnav. Match href hashes to heading anchor IDs in the page."
+msgstr ""
+
+#: inc/civicone/patterns.php:127
+msgid "Resource rules callout"
+msgstr ""
+
+#: inc/civicone/patterns.php:128
+msgid "H3 section title + H4 rule items in a callout box. Resources hub pattern."
+msgstr ""
+
+#: inc/civicone/patterns.php:134
+msgid "civicone H3 heading — anchored"
+msgstr ""
+
+#: inc/civicone/patterns.php:135
+msgid "H3 with anchor ID for hub anchor-tab navigation. Use on hub pages (Resources, Programs) where on-page jump links are needed. For plain subsections without tabs, use \"civicone H3 heading — inline\" instead."
+msgstr ""
+
+#: inc/civicone/patterns.php:141
+msgid "Topic page header"
+msgstr ""
+
+#: inc/civicone/patterns.php:142
+msgid "H2 page title — use on About, Programs, and Resources child pages."
+msgstr ""
+
+#: inc/civicone/patterns.php:148
+msgid "Blog category filter"
+msgstr ""
+
+#: inc/civicone/patterns.php:149
+msgid "Text links to news category archives (All, News, Land use, Safety)."
+msgstr ""
+
+#: inc/civicone/patterns.php:155
+msgid "Service card"
+msgstr ""
+
+#: inc/civicone/patterns.php:156
+msgid "Heading + description + button card. Use inside a Columns block for multi-card rows. Add an Image block above the title after inserting."
+msgstr ""
+
+#: inc/civicone/patterns.php:163
+msgid "civicone blank page"
+msgstr ""
+
+#: inc/civicone/patterns.php:164
+msgid "Starting point for any new page — site header, empty content area, site footer. Set the page to the \"Blank\" WordPress template before inserting to avoid a duplicate header/footer."
+msgstr ""
+
+#: inc/civicone/patterns.php:171
+msgid "civicone embed page"
+msgstr ""
+
+#: inc/civicone/patterns.php:172
+msgid "Header + H2 title + description + shortcode placeholder. Use for pages that embed a third-party tool (wpForo, CalendarWiz, etc.). Set the page to the \"Blank\" WordPress template before inserting."
+msgstr ""
+
+#: inc/civicone/section-nav.php:47
+msgid "On this page"
+msgstr ""
+
+#: inc/d4c-section-config.php:31
+#: inc/d4c-section-config.php:35
+msgid "About"
+msgstr ""
+
+#: inc/d4c-section-config.php:40
+#: inc/d4c-section-config.php:134
+msgid "Board"
+msgstr ""
+
+#: inc/d4c-section-config.php:45
+msgid "Staff"
+msgstr ""
+
+#: inc/d4c-section-config.php:50
+msgid "Committees"
+msgstr ""
+
+#: inc/d4c-section-config.php:55
+msgid "Coalition Members"
+msgstr ""
+
+#: inc/d4c-section-config.php:60
+msgid "Transparency"
+msgstr ""
+
+#: inc/d4c-section-config.php:68
+msgid "Programs and Services"
+msgstr ""
+
+#: inc/d4c-section-config.php:72
+msgid "Overview"
+msgstr ""
+
+#: inc/d4c-section-config.php:77
+msgid "Grants"
+msgstr ""
+
+#: inc/d4c-section-config.php:82
+msgid "Programs"
+msgstr ""
+
+#: inc/d4c-section-config.php:87
+msgid "Services"
+msgstr ""
+
+#: inc/d4c-section-config.php:92
+msgid "Building Diverse Communities"
+msgstr ""
+
+#: inc/d4c-section-config.php:97
+msgid "Emergency Preparedness"
+msgstr ""
+
+#: inc/d4c-section-config.php:102
+msgid "Land Use and Transportation"
+msgstr ""
+
+#: inc/d4c-section-config.php:107
+#: inc/d4c-section-config.php:159
+msgid "Watershed Health"
+msgstr ""
+
+#: inc/d4c-section-config.php:115
+msgid "Resources"
+msgstr ""
+
+#: inc/d4c-section-config.php:119
+msgid "All resources"
+msgstr ""
+
+#: inc/d4c-section-config.php:124
+msgid "Advocacy Resources"
+msgstr ""
+
+#: inc/d4c-section-config.php:129
+msgid "Behavioral Health"
+msgstr ""
+
+#: inc/d4c-section-config.php:139
+msgid "Civic Involvement"
+msgstr ""
+
+#: inc/d4c-section-config.php:144
+msgid "Emergency Prep"
+msgstr ""
+
+#: inc/d4c-section-config.php:149
+msgid "Livability"
+msgstr ""
+
+#: inc/d4c-section-config.php:154
+msgid "Training"
+msgstr ""
+
+#: inc/d4c-section-config.php:164
+msgid "Traffic Safety"
+msgstr ""
+
+#: inc/d4c-section-tabs-seed.php:185
+msgid "You do not have permission to manage menus."
+msgstr ""
+
+#. translators: 1: created count, 2: skipped count.
+#: inc/d4c-section-tabs-seed.php:231
+#, php-format
+msgid "Section tab menus: %1$d created, %2$d skipped (already assigned)."
+msgstr ""
+
+#: inc/d4c-section-tabs-seed.php:253
+msgid "Section headings and tab rows can be built from the current built-in defaults, then edited here like any menu. Each seeded menu’s title is the section heading shown on its child pages, and its items are the tab row under it. This does not change how the site looks — the seeded menus match what is on the site today."
+msgstr ""
+
+#: inc/d4c-section-tabs-seed.php:261
+msgid "Create section tab menus from defaults"
+msgstr ""
+
+#. translators: %s: section label, e.g. Resources.
+#: inc/d4c-section-tabs.php:80
+#, php-format
+msgid "Section tabs — %s"
+msgstr ""
+
+#: inc/d4c-section-tabs.php:256
+msgid "Section headings and tabs: assign a menu to a “Section tabs — …” location to control that section. The menu’s title becomes the section heading shown on its child pages, and the menu’s items become the tab row under it. Leave a location unassigned to keep the built-in defaults."
+msgstr ""
+
+#: patterns/header-bar.php
+msgctxt "Pattern title"
+msgid "CivicOne header bar"
+msgstr ""
+
+#: patterns/header-bar.php
+msgctxt "Pattern description"
+msgid "Logo left, primary nav (wp_navigation 791), CivicOne mobile drawer. Source of truth: inc/civicone/header-bar.php — do not edit markup here."
+msgstr ""
+
+#: blocks/section-subnav/block.json
+msgctxt "block title"
+msgid "CivicOne Section Sub-nav"
+msgstr ""
+
+#: blocks/section-subnav/block.json
+msgctxt "block description"
+msgid "The section tab row for the current section. Edit tabs in Appearance → Menus."
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Text"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Background"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Base (on dark surfaces)"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary (brand blue)"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Panel blue-gray"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Panel sage"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Link blue"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Band teal"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Callout fill"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Rule / border"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Muted text"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System Sans"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Body"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "H2"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "H1"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "1"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "3"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Section"
+msgstr ""
