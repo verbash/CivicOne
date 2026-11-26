@@ -66,6 +66,7 @@ require_once get_stylesheet_directory() . '/inc/civicone/header-stability.php';
 require_once get_stylesheet_directory() . '/inc/civicone/header-cta.php';
 require_once get_stylesheet_directory() . '/inc/civicone/section-nav.php';
 require_once get_stylesheet_directory() . '/inc/civicone/section-title.php';
+require_once get_stylesheet_directory() . '/inc/civicone/menu-item-link.php';
 require_once get_stylesheet_directory() . '/inc/civicone/blocks.php';
 require_once get_stylesheet_directory() . '/inc/civicone/embed-wrapper.php';
 require_once get_stylesheet_directory() . '/inc/civicone/hub-anchors.php';

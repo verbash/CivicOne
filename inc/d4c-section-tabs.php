@@ -254,7 +254,7 @@ function d4c_section_tabs_admin_notice(): void {
 
 	echo '<div class="notice notice-info"><p>';
 	echo esc_html__(
-		'Section headings and tabs: assign a menu to a “Section tabs — …” location to control that section. The menu’s title becomes the section heading shown on its child pages, and the menu’s items become the tab row under it. Leave a location unassigned to keep the built-in defaults.',
+		'Section headings and tabs: assign a menu to a “Section tabs — …” location to control that section. The menu’s title becomes the section heading shown on its child pages, and the menu’s items become the tab row under it. To change where a tab goes, open the item and use “Links to”. Leave a location unassigned to keep the built-in defaults.',
 		'civicone'
 	);
 	echo '</p></div>';
