@@ -2,6 +2,10 @@
 
 All notable changes to CivicOne. Format: Keep a Changelog; versioning: SemVer.
 
+## 0.1.1 — 2026-11-26
+### Added
+- "Links to" setting on every menu item in Appearance → Menus: pick another page, or type a web address, to change where a section tab (or any classic menu item) points. Previously Page items could only be relabelled; their target was fixed. The item's label is kept.
+
 ## 0.1.0 — 2026-09-09
 ### Changed
 - Consolidated the CivicOne plugin into a single child theme — there is no longer a separate companion plugin to install or maintain. All UI, patterns, block styles, filters, and PHP logic now ship inside the theme.

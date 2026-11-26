@@ -14,6 +14,7 @@ and `assets/civicone.css` all load from the theme on theme init.
 | CivicOne UI kit (header, drawer, section nav, CTA, patterns, block styles, base CSS) | `inc/civicone/*.php`, `assets/`, `patterns/` |
 | D4C section tabs + nav ID | `inc/d4c-section-config.php` |
 | Blog helpers | `inc/blog.php` |
+| Editable menu link targets (“Links to” on each item in Appearance → Menus) | `inc/civicone/menu-item-link.php` |
 | Section-tab menu seeder | `inc/d4c-section-tabs.php`, `inc/d4c-section-tabs-seed.php` |
 | Header pattern | `patterns/header-bar.php` → `civicone_header_bar_markup()` in `inc/civicone/header-bar.php` |
 
